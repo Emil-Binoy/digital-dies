@@ -5,11 +5,16 @@ random.addEventListener("click",()=>{
     let len = Math.floor(Math.random()*arr.length);
     let num = arr[len];
     container.textContent = num;
-    container.textContent = num;
 
     container.classList.add("elementToFadeInAndOut");
     
     container.addEventListener("animationend", () => {
         container.classList.remove("elementToFadeInAndOut");
     }, { once: true });
+});
+
+const reset=document.getElementById("rst");
+reset.addEventListener('click',()=>{
+    container.textContent = "";
+    
 });
